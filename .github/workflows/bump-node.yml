@@ -22,6 +22,6 @@ jobs:
         run: |
           # Install the latest Node.js version using npm
           #npm install -g --silent n
-          n latest
+          sudo n latest
           # Verify the Node.js version
           node --version
