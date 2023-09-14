@@ -21,7 +21,8 @@ jobs:
       - name: Set up Node.js
         run: |
           # Install the latest Node.js version using npm
-          #npm install -g --silent n
+          sudo npm cache clean -f
+          sudo npm install -g n
           sudo n latest
           # Verify the Node.js version
           node --version
