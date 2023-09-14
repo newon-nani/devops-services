@@ -21,7 +21,7 @@ jobs:
       - name: Set up Node.js
         run: |
           # Install the latest Node.js version using npm
-          npm install
+          npm install -g --silent n
           n latest
           # Verify the Node.js version
           node --version
