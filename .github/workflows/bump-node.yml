@@ -1,0 +1,28 @@
+name: Bump Node.js version
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  bump-node-version:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14' # Replace with your desired Node.js version
+
+      - name: Set up Node.js
+        run: |
+          # Install the latest Node.js version using npm
+          npm cache clean -f
+          npm install -g n
+          n latest
+          # Verify the Node.js version
+          node --version
